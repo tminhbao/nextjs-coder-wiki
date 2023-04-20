@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {}
@@ -6,11 +7,13 @@ export default function Navbar({}: Props) {
   return (
    <nav>
     <div>
-       {/* <a href="/">Coder Wikipedia</a>  */}
+       <Link href={"/"}>
+            <span>Home Page</span>
+       </Link>
     </div>
     <div>
-        <a href="/users">About</a>
-        <a href="/coders">All Coders</a>
+        <Link href="/users">Users</Link>
+        <Link href="/coders">Coders</Link>
     </div>
    </nav>
   )
